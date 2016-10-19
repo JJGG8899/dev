@@ -1,0 +1,66 @@
+<% layout('layout') -%>
+<section class="page-header browse-single-header">
+  <div class="container">
+    <h2> Project Detail </h2>
+  </div>
+</section>
+
+<section class="project-detail-wrapper">
+  <h2> <i class="fa fa-map-marker" aria-hidden="true"></i> <%= project.prjAddress %> </h2>
+  <hr>
+  <div class="container row">
+    <div class="col-md-7 col-xs-12">
+      <div class="project-detail-image">
+        <img src="/images/<%= project.prjPicture %>"/>
+      </div>
+    </div>
+    <div class="col-md-5 col-xs-12">
+      <div class="project-detail-list">
+        <div class="row">
+          <div class="col-xs-2 project-detail-list-left">
+            <p>	Title </p><br>
+            <p>	Type </p><br>
+            <p>	Application </p><br>
+            <p>	Access </p><br>
+          </div>
+          <div class="col-xs-10 project-detail-list-right">
+            <p>	<%= project.prjTitle %> </p><br>
+            <p>	<%= project.prjType %> </p><br>
+            <p>	<%= project.prjApplication %> </p><br>
+            <p>	<%= project.prjAccess %> </p><br>
+          </div>
+        </div>
+      </div>
+      <div class="project-detail-collections-buttons">
+        <% if(inList) {%>
+          <form action="/collections/remove/<%= project._id %>" method="post">
+            <input type="hidden" name="projectId" value="<%= project._id %>">
+            <button type="submit" class="btn"> Remove Collection </button>
+          </form>
+        <% } else { %>
+          <form action="/collections/<%= project._id %>" method="post">
+            <input type="hidden" name="project_id" value="<%= project._id %>">
+            <button type="submit" class="btn"> Add To Collection </button>
+          </form>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="project-detail-description">
+  <div class="">
+    <h2><i class="fa fa-folder" aria-hidden="true"></i> Description </h2>
+    <hr>
+  </div>
+  <div class="project-detail-description-content container">
+    <p>
+      <%= project.prjDescription %>
+    </p>
+  </div>
+</section>
+<section class="project-detail-map">
+  <div class="">
+    <h2><i class="fa fa-map" aria-hidden="true"></i> Map </h2>
+    <hr>
+  </div>
+</section>

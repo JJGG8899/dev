@@ -1,0 +1,71 @@
+<% layout('layout') -%>
+<section class="page-header row browse-all-header">
+	<div class="container">
+		<h2> Browse All Projects </h2>
+	</div>
+</section>
+
+<section class="browse-all-wrapper">
+	<div class="container row">
+    <% for(var i = 0; i < projects.length; i++) { %>
+		<div class="browse-all-item col-md-4 col-sm-6 col-xs-12">
+			<div class="thumbnail">
+				<div class="thumbnail-image">
+					<a href="/projects/<%= projects[i]._id %>">
+						<img src="/images/<%= projects[i].prjPicture %>">
+					</a>
+					<div class="thumbnail-image-tag">
+						<h5> <%= projects[i].prjCity %> </h5>
+					</div>
+				</div>
+				<div class="caption">
+					<div class="row">
+						<div class="col-xs-4">
+							<span> Type </span>
+						</div>
+						<div class="col-xs-4">
+							<span> Application </span>
+						</div>
+						<div class="col-xs-4">
+							<span> Access </span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-4 caption-info-detail">
+							<%= projects[i].prjType %>
+						</div>
+						<div class="col-xs-4 caption-info-detail">
+							<%= projects[i].prjApplication %>
+						</div>
+						<div class="col-xs-4 caption-info-detail">
+							<%= projects[i].prjAccess %>
+						</div>
+					</div>
+					<hr>
+					<div class="caption-info-title">
+						<h5> <%= projects[i].prjTitle %> </h5>
+					</div>
+	      </div>
+	    </div>
+		</div>
+    <% } %>
+	</div>
+</section>
+
+<section class="pagination-wrapper container">
+	<ul class="pagination">
+		<% for(var i=1; i <= pages; i++) {%>
+			<% if(i===1) { %>
+				<li class= <%= currentPage == 1 ? "active page-item" :"page-item" %> > <a href="/projects" \> 1 </a></li>
+			<% } else { %>
+
+				<% if(currentPage == i) {%>
+					<li class="active page-item"><a href="/projects/page/<%= i %>"><%= i %></a></li>
+				<% } else { %>
+					<li class="page-item"><a href="/projects/page/<%= i %>"><%= i %></a></li>
+				<% } %>
+
+			<% } %>
+		<% } %>
+	</ul>
+</section>

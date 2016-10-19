@@ -1,0 +1,23 @@
+<% layout('layout') -%>
+<h2 class="page-header"> Manage Projects </h2>
+
+<div class="projects-talbe-wrapper">
+  <table class="table">
+    <tr>
+      <td> Project Id </td>
+      <td> Project Title </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <% for(var i = 0; i < projects.length; i++) { %>
+      <tr>
+        <td> <%= projects[i]._id %></td>
+        <td> <%= projects[i].prjTitle %></td>
+        <td> <a href="/admin/projects/edit/<%= projects[i]._id %>"
+                class="btn btn-primary"> Edit </a></td>
+        <td> <a data-id="<%= projects[i]._id %>"
+                class="btn btn-danger delete-project"> Delete </a></td>
+      </tr>
+    <% } %>
+  </table>
+</div>

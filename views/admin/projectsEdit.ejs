@@ -1,0 +1,89 @@
+<% layout('layout') -%>
+<h2 class="page-header"> Edit Project </h2>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <form action="/admin/projects/edit/<%= project._id %>"
+          method="post"
+          enctype="multipart/form-data" >
+      <div class="form-group">
+        <label> Project Title: </label>
+        <input type="text"
+               class="form-control"
+               name="prjTitle"
+               placeholder="Project Title"
+               value="<%= project.prjTitle %>">
+      </div>
+      <div class="form-group">
+        <label> Project City: </label>
+        <input type="text"
+               class="form-control"
+               name="prjCity"
+               placeholder="San Jose, CA"
+               value="<%= project.prjCity %>">
+      </div>
+      <div class="form-group">
+        <label> Project Address: </label>
+        <input type="text"
+               class="form-control"
+               name="prjAddress"
+               placeholder="Project Address"
+               value="<%= project.prjAddress %>">
+      </div>
+      <div class="form-group">
+        <label> Project Type:</label>
+        <select class="form-control"
+                name="prjType"
+                value="<%= project.prjType %>" >
+          <option value='Touch Table'> Touch Table </option>
+          <option value='Digital Signage'> Digital Signage </option>
+          <option value='Touch Wall'> Touch Wall </option>
+          <option value='Video Wall'> Video Wall </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label> Project Application:</label>
+        <select class="form-control"
+                name="prjApplication"
+                value="<%= project.prjApplication %>">
+          <option value='Entertainment'> Entertainment </option>
+          <option value='Education'> Education </option>
+          <option value='Office'> Office </option>
+          <option value='Public Place'> Public Place </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label> Project Access:</label>
+        <select class="form-control"
+                name="prjAccess"
+                value="<%= project.prjAccess %>">
+          <option value='Public'> Public </option>
+          <option value='Private'> Private </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label> Project Description: </label>
+        <textarea name="prjDescription"
+                  rows="20"
+                  class="form-control" ><%= project.prjDescription %>
+        </textarea>
+      </div>
+      <div class="form-group">
+        <img src="/images/<%= project.prjPicture %>"
+             style="width:100%; height:100%" />
+      </div>
+      <div class="form-group">
+        <label> Upload New Picture: </label>
+        <input type="file"
+               class="form-control"
+               name="prjPictureNew" >
+      </div>
+      <input type="hidden"
+             name="prjPicture"
+             value="<%= project.prjPicture %>" >
+      <button type="submit" name="submit"
+          class='btn btn-success'> Submit
+      </button>
+    </form>
+  </div>
+</div>

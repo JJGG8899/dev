@@ -1,0 +1,40 @@
+<% layout('layout') -%>
+
+      <section class="signup-logo row">
+      	<div class="col-md-4 col-md-offset-4 col-xs-6 col-xs-offset-3">
+      		<div class="signup-logo-img">
+      			<img src="/images/logo.svg" alt="logo-img" />
+      		</div>
+      		<div class="signup-logo-content">
+      			<h2> New User </h2>
+      		</div>
+      	</div>
+      </section>
+      <section class="register-form row">
+      	<div class="col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1">
+      		<form class="form-horizontal" role="form" action="/users/register" method="post">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                <input type="text" class="form-control" name="userName" placeholder="Your Username">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                <input type="email" class="form-control" name="email" placeholder="Your Email">
+            </div>
+      			<div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                <input type="password" class="form-control" name="password" placeholder="Your Password">
+            </div>
+
+      			<div class="form-group form-content">
+      				<p> Already have account? <a href="/users/login"> Login here </a></p>
+            </div>
+
+            <div class="form-group row form-button">
+  	          <div class="col-sm-12 controls">
+  	            <button class="btn" name="submit" type="submit"> Register </button>
+  	          </div>
+  	        </div>
+          </form>
+      	</div>
+      </section>

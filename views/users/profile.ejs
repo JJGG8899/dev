@@ -1,0 +1,92 @@
+<% layout('layout') -%>
+
+<section class="page-header user-page-header">
+	<div class="container">
+		<h2> My Profile </h2>
+	</div>
+</section>
+
+<section class="user-profile-header">
+	<div class="container row">
+		<div class="col-md-2 col-xs-12 profile-item">
+			<div class="user-profile-avatar">
+				<img src="/images/defaultAvatar.svg" alt="" />
+			</div>
+		</div>
+		<div class="col-md-8 col-xs-12 profile-item">
+			<div class="user-profile-name">
+				<h1>  <%= user.profile.userName %> </h1>
+			</div>
+		</div>
+		<div class="col-md-2 col-xs-12 profile-item">
+			<a href="/users/profile/edit">
+				<button class='btn'>
+					Edit
+				</button>
+			</a>
+		</div>
+	</div>
+</section>
+
+<section class="user-collections-wrapper">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2 col-xs-12 user-collections-content">
+			<h2><i class="fa fa-book" aria-hidden="true"></i> Collections </h2>
+			<hr>
+			<% if(collections.length > 0) { %>
+				<div class="user-collections row">
+					<% for( var i =0; i<collections.length; i++) { %>
+						<div class="browse-all-item col-md-6 col-xs-12">
+							<div class="thumbnail">
+								<div class="thumbnail-image">
+									<a href="/projects/<%= collections[i].projectId._id %>">
+										<img src="/images/<%= collections[i].projectId.prjPicture %>">
+									</a>
+									<div class="thumbnail-image-tag">
+										<h5> <%= collections[i].projectId.prjCity %> </h5>
+									</div>
+								</div>
+								<div class="caption">
+									<div class="row">
+										<div class="col-xs-4">
+											<span> Type </span>
+										</div>
+										<div class="col-xs-4">
+											<span> Application </span>
+										</div>
+										<div class="col-xs-4">
+											<span> Access </span>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xs-4 caption-info-detail">
+											<%= collections[i].projectId.prjType %>
+										</div>
+										<div class="col-xs-4 caption-info-detail">
+											<%= collections[i].projectId.prjApplication %>
+										</div>
+										<div class="col-xs-4 caption-info-detail">
+											<%= collections[i].projectId.prjAccess %>
+										</div>
+									</div>
+									<hr>
+									<div class="caption-info-title">
+										<h5> <%= collections[i].projectId.prjTitle %> </h5>
+									</div>
+					      </div>
+					    </div>
+						</div>
+					<% } %>
+				</div>
+			<% } else { %>
+				<div class="user-collections row">
+					<div class="no-collections">
+						<p>
+							No collections yet. <a href="/projects">Click to browse all projects </a>
+						</p>
+					</div>
+				</div>
+			<% } %>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,297 @@
+/*Global Vars*/
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 200;
+  padding: 0;
+  background-color: #F9F9F9; }
+
+h2 {
+  color: #5b5b60;
+  font-size: 2rem;
+  font-weight: 200; }
+
+h5 {
+  font-weight: 200;
+  color: #424242; }
+
+.wrapper {
+  width: 1440px;
+  max-width: 70%;
+  margin: 0 auto; }
+
+.button {
+  border: none;
+  outline: none;
+  border-radius: 2rem;
+  padding: 0.7rem 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer; }
+
+.button-highlight {
+  background-color: #008ACA; }
+
+.button-secondary {
+  background: rgba(255, 255, 255, 0.3); }
+
+.button-small {
+  padding: 0.75rem 2rem; }
+
+.message-bar{
+  margin-top: 50px; }
+
+/*Register Page*/
+.signup-logo {
+  margin: 70px auto 20px auto;
+  text-align: center; }
+  .signup-logo .signup-logo-img {
+    width: 50px;
+    height: 50px;
+    display: inline-block; }
+    .signup-logo .signup-logo-img img {
+      width: 100%;
+      height: 100%; }
+
+.register-form {
+  text-align: center; }
+  .register-form .form-horizontal .input-group {
+    margin-bottom: 15px; }
+    .register-form .form-horizontal .input-group .fa {
+      width: 20px; }
+  .register-form .form-horizontal .form-content {
+    color: #a6a6a6; }
+    .register-form .form-horizontal .form-content button {
+      text-decoration: none;
+      cursor: pointer; }
+  .register-form .form-horizontal .form-button button {
+    background-color: #e37874;
+    width: 100%;
+    text-decoration: none;
+    color: white; }
+
+/*Login Page*/
+.login-logo {
+  margin: 70px auto 20px auto;
+  text-align: center; }
+  .login-logo .login-logo-img {
+    width: 50px;
+    height: 50px;
+    display: inline-block; }
+    .login-logo .login-logo-img img {
+      width: 100%;
+      height: 100%; }
+
+.login-form {
+  text-align: center; }
+  .login-form .form-horizontal .input-group {
+    margin-bottom: 15px; }
+    .login-form .form-horizontal .input-group .fa {
+      width: 20px; }
+  .login-form .form-horizontal .form-content {
+    color: #a6a6a6; }
+    .login-form .form-horizontal .form-content button {
+      text-decoration: none;
+      cursor: pointer; }
+  .login-form .form-horizontal .form-button button {
+    background-color: #e37874;
+    width: 100%;
+    text-decoration: none;
+    color: white; }
+
+/*Browse All Projects Page*/
+.page-header {
+  background-color: white;
+  padding-top: .7rem;
+  margin-top: -11px; }
+
+/*.browse-all-header{
+  margin-top: -11px; }*/
+
+.browse-all-wrapper .browse-all-item .thumbnail {
+  padding: 0; }
+  .browse-all-wrapper .browse-all-item .thumbnail .thumbnail-image {
+    position: relative;
+    width: 100%;
+    height: 240px; }
+    .browse-all-wrapper .browse-all-item .thumbnail .thumbnail-image img {
+      height: 100%;
+      width: 100%; }
+    .browse-all-wrapper .browse-all-item .thumbnail .thumbnail-image .thumbnail-image-tag {
+      position: absolute;
+      left: 0;
+      top: 70%;
+      background-color: rgba(0, 156, 173, 0.8);
+      height: 34px;
+      padding: 0 10px; }
+      .browse-all-wrapper .browse-all-item .thumbnail .thumbnail-image .thumbnail-image-tag h5 {
+        font-size: 15px;
+        color: white; }
+  .browse-all-wrapper .browse-all-item .thumbnail .caption {
+    font-size: 13px;
+    color: #424242;
+    text-align: center; }
+    .browse-all-wrapper .browse-all-item .thumbnail .caption span {
+      padding: 0;
+      font-size: 11px;
+      color: #9e9e9e; }
+    .browse-all-wrapper .browse-all-item .thumbnail .caption .caption-info-detail {
+      padding: 0; }
+    .browse-all-wrapper .browse-all-item .thumbnail .caption .caption-info-title {
+      text-align: left;
+      padding: 0 .5rem;
+      overflow: hidden;
+      margin-top: -10px; }
+
+.pagination-wrapper {
+  text-align: center; }
+  .pagination-wrapper ul {
+    margin: 50px auto 20px; }
+
+/*Browse Single Project Page*/
+.browse-single-header{
+  margin-top: -11px; }
+
+.project-detail-wrapper h2 .fa {
+  color: #009CAD;
+  margin: 0 10px; }
+
+.project-detail-wrapper .project-detail-image {
+  width: 100%; }
+  .project-detail-wrapper .project-detail-image img {
+    width: 100%;
+    height: 100%; }
+.project-detail-wrapper .project-detail-list {
+  width: 100%;
+  background-color: #fff; }
+  .project-detail-wrapper .project-detail-list .project-detail-list-left {
+    padding-top: 20px;
+    padding-left: 23px; }
+    .project-detail-wrapper .project-detail-list .project-detail-list-left p {
+      color: letters-normal;
+      text-align: left;
+      margin: 0; }
+  .project-detail-wrapper .project-detail-list .project-detail-list-right {
+    padding-top: 20px;
+    padding-right: 23px;
+    text-align: right; }
+    .project-detail-wrapper .project-detail-list .project-detail-list-right p {
+      color: letters-normal;
+      font-weight: 600;
+      margin: 0; }
+      .project-detail-wrapper .project-detail-collections-buttons {
+        margin-top: 40px; }
+        .project-detail-wrapper .project-detail-collections-buttons button {
+          color: #fff;
+          background-color: #009CAD;
+          padding: 10px 30px; }
+
+.project-detail-description {
+  margin-top: 100px; }
+  .project-detail-description h2 .fa {
+    color: #009CAD;
+    margin: 0 10px; }
+  .project-detail-description p {
+    color: #9e9e9e; }
+
+.project-detail-map {
+  margin-top: 100px; }
+  .project-detail-map h2 .fa {
+    color: #009CAD;
+    margin: 0 10px; }
+
+/*Single User Profile Page*/
+/*.user-page-header{
+  margin-top: -11px;}*/
+.user-profile-header {
+  width: 100%;
+  height: 250px;
+  background-color: #505d6c;
+  border-radius: 4px;
+  color: #fff; }
+  .user-profile-header .profile-item {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    float: left; }
+    .user-profile-header .profile-item .user-profile-avatar {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%; }
+      .user-profile-header .profile-item .user-profile-avatar img {
+        width: 100%;
+        height: 100%; }
+    .user-profile-header .profile-item .user-profile-name h1 {
+      color: #fff;
+      font-size: 30px; }
+
+    .user-profile-header .profile-item a button {
+      text-decoration: none;
+      color: #fff;
+      padding: 10px 30px; }
+.user-collections-wrapper .thumbnail-image{
+  height: 240px;
+}
+.user-collections-content {
+  margin-top: 40px;
+  background-color: #fff;
+  border: solid #eee 1px; }
+  .user-collections-content i {
+    color: #009CAD;
+    margin-right: 10px; }
+  .user-collections-content .user-collections .no-collections {
+    text-align: center; }
+    .user-collections-content .user-collections .no-collections p {
+      color: #424242; }
+      .user-collections-content .user-collections .no-collections p a {
+        text-decoration: none; }
+  .user-collections-content .user-collections .thumbnail {
+    padding: 0; }
+    .user-collections-content .user-collections .thumbnail .thumbnail-image {
+      position: relative;
+      width: 100%; }
+      .user-collections-content .user-collections .thumbnail .thumbnail-image img {
+        height: 100%;
+        width: 100%; }
+      .user-collections-content .user-collections .thumbnail .thumbnail-image .thumbnail-image-tag {
+        position: absolute;
+        left: 0;
+        top: 70%;
+        background-color: rgba(0, 156, 173, 0.8);
+        height: 34px;
+        padding: 0 10px; }
+        .user-collections-content .user-collections .thumbnail .thumbnail-image .thumbnail-image-tag h5 {
+          font-size: 15px;
+          color: white; }
+    .user-collections-content .user-collections .thumbnail .caption {
+      font-size: 13px;
+      color: #424242;
+      text-align: center; }
+      .user-collections-content .user-collections .thumbnail .caption span {
+        padding: 0;
+        font-size: 11px;
+        color: #9e9e9e; }
+      .user-collections-content .user-collections .thumbnail .caption .caption-info-detail {
+        padding: 0; }
+      .user-collections-content .user-collections .thumbnail .caption .caption-info-title {
+        text-align: left;
+        padding: 0 .5rem;
+        overflow: hidden;
+        margin-top: -10px; }
+
+.edit-profile-wrapper .user-avatar {
+  width: 200px;
+  height: 200px;
+  margin: 40px auto; }
+  .edit-profile-wrapper .user-avatar img {
+    width: 100%;
+    height: 100%; }
+
+@media only screen and (max-width: 992px) {
+  .user-profile-header .profile-item {
+    height: 100%;
+    justify-content: center; } }
