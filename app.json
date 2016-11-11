@@ -1,0 +1,6 @@
+{
+  "name":"Dev_v1.0 InteractivesAound",
+  "description":"A full-stack production ready Node.js app using Express",
+  "repository":"https://github.com/JJGG8899/dev",
+  "keywords":["node","express","aws3","mongolab"]
+}
