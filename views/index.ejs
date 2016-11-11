@@ -1,4 +1,102 @@
-<% layout('layout') -%>
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Snoop Landing Page </title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+<% include header %>
 
-  <h1> <%= title %> Area </h1>
-  <p>Welcome to ejs-mate layout <%= title %></p>
+<section class="landing-banner-wrapper">
+	<div class="landing-banner">
+		<div class="heading-wrapper">
+			<h1> Find interactive products around you </h1>
+			 Contact us if you are interested in any of listed products.
+		</div>
+	</div>
+</section>
+
+<div class="container">
+	<section class="landing-featured-wrapper">
+		<div class="content-wrapper">
+			<h1> We help build next interactive product </h1>
+			<h2> Go out and experience any attractive products near you. We help implement your next product. </h2>
+		</div>
+
+		<div class="row landing-featured">
+			<div class="featured col-md-4 col-xs-12">
+				<div class="featured-wrapper">
+					<img src="/images/f2.jpg" alt="" />
+					<div class="content">
+						<h1> Touch Wall </h1>
+						<h2> San Francisco </h2>
+					</div>
+				</div>
+			</div>
+			<div class="featured col-md-4 col-xs-12">
+				<div class="featured-wrapper">
+					<img src="/images/f3.jpg" alt="" />
+					<div class="content">
+						<h1> Touch Table </h1>
+						<h2> Chicago </h2>
+					</div>
+				</div>
+			</div>
+			<div class="featured col-md-4 col-xs-12">
+				<div class="featured-wrapper">
+					<img src="/images/f4.jpg" alt="" />
+					<div class="content">
+						<h1> Digital Signage </h1>
+						<h2> New York </h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+<section class="landing-service-wrapper container">
+	<h1> Services we provide </h1>
+	<div class="row icons">
+		<div class="landing-service col-md-4 col-xs-12">
+			<h1><i class="fa fa-credit-card-alt" aria-hidden="true"></i></h1>
+			<br>
+			<h2> Distribute Product Hardware </h2>
+		</div>
+		<div class="landing-service col-md-4 col-xs-12">
+			<h1><i class="fa fa-hand-o-up" aria-hidden="true"></i></h1>
+			<br>
+			<h2> Interactive Software Solution </h2>
+		</div>
+		<div class="landing-service col-md-4 col-xs-12">
+			<h1><i class="fa fa-comments-o" aria-hidden="true"></i></h1>
+			<br>
+			<h2> Expert Consultation </h2>
+		</div>
+	</div>
+</section>
+
+<section class="landing-about-us">
+	<img src="/images/map1.png" alt="" />
+	<div class="content-wrapper">
+		<h1> About us</h1>
+		<hr>
+		<p>
+			Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+		</p>
+	</div>
+	<div class="footer">
+		Copyright 2016 @ InteractivesAround. All Rights Reserved.
+	</div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"> </script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"> </script>
+	<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+	<script type="text/javascript">stLight.options({publisher: "5cdc3cde-9263-4ea3-8d1b-414c8a992326", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+</body>
+</html>

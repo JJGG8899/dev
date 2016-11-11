@@ -26,6 +26,16 @@ var mongo = require('mongodb');
 var mongoose = require('mongoose');
 var db = mongoose.connection;
 
+// connect to mongoLab
+mongoose.connect('mongodb://JasonGao1991:Gby032791@ds063526-a0.mlab.com:63526,ds063526-a1.mlab.com:63526/interactives_db?replicaSet=rs-ds063526',
+  function(err){
+    if(err){
+      console.log(err);
+    } else {
+      console.log('Connected to MongoLab');
+    }
+});
+
 // Routes
 var routes = require('./routes/index');
 var users = require('./routes/users');

@@ -11,7 +11,7 @@
   <div class="container row">
     <div class="col-md-7 col-xs-12">
       <div class="project-detail-image">
-        <img src="/images/<%= project.prjPicture %>"/>
+        <img src="<%= project.prjPicture %>"/>
       </div>
     </div>
     <div class="col-md-5 col-xs-12">
@@ -33,7 +33,7 @@
       </div>
       <div class="project-detail-collections-buttons">
         <% if(inList) {%>
-          <form action="/collections/remove/<%= project._id %>" method="post">
+          <form action="/collections/remove/<%= project._id %>?access_token=<%= user._id %>" method="post">
             <input type="hidden" name="projectId" value="<%= project._id %>">
             <button type="submit" class="btn"> Remove Collection </button>
           </form>

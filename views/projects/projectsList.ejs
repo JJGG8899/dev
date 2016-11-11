@@ -1,7 +1,7 @@
 <% layout('layout') -%>
 <section class="page-header row browse-all-header">
 	<div class="container">
-		<h2> Browse All Projects </h2>
+		<h2> Browse All Interactive Products </h2>
 	</div>
 </section>
 
@@ -12,7 +12,7 @@
 			<div class="thumbnail">
 				<div class="thumbnail-image">
 					<a href="/projects/<%= projects[i]._id %>">
-						<img src="/images/<%= projects[i].prjPicture %>">
+						<img src="<%= projects[i].prjPicture %>">
 					</a>
 					<div class="thumbnail-image-tag">
 						<h5> <%= projects[i].prjCity %> </h5>

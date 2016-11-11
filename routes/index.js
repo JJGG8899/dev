@@ -47,30 +47,42 @@ router.get('/projects/page/:page', function(req,res,next){
 
 /* GET projectsSingle page. */
 router.get('/projects/:id', function(req,res,next){
-  Project.findOne({_id: req.params.id}, function(err,project){
-    if(err) return next(err);
-    Collection.findOne({ owner: req.user._id}, function(err,collection){
+  if(req.user != undefined){
+    console.log('User is logged in, with access');
+    Project.findOne({_id: req.params.id}, function(err,project){
       if(err) return next(err);
-      projectIdList = collection.collectedProjects
-                                .map(function(item){
-                                  return item.projectId.toString()
-                                });
-      // console.log(projectIdList);
-      // console.log(project._id);
-      // console.log( projectIdList.indexOf(project._id.toString()) );
-      if( projectIdList.indexOf(project._id.toString()) === -1){
-        var inList = false
-      } else {
-        var inList = true
-      }
-      console.log(inList);
-      res.render('projects/projectsSingle',{
-        title: 'projectsSingle',
-        project: project,
-        inList: inList
+      Collection.findOne({ owner: req.user._id}, function(err,collection){
+        if(err) return next(err);
+        projectIdList = collection.collectedProjects
+                                  .map(function(item){
+                                    return item.projectId.toString()
+                                  });
+        // console.log(projectIdList);
+        // console.log(project._id);
+        // console.log( projectIdList.indexOf(project._id.toString()) );
+        if( projectIdList.indexOf(project._id.toString()) === -1){
+          var inList = false
+        } else {
+          var inList = true
+        }
+        // console.log(inList);
+        res.render('projects/projectsSingle',{
+          title: 'projectsSingle',
+          project: project,
+          inList: inList
+        });
       });
     });
-  });
+  } else {
+    console.log('User is blocked, NO access');
+    Project.findOne({_id: req.params.id}, function(err,project){
+      if(err) return next(err);
+      res.render('projects/projectsSinglePublic',{
+        title: 'projectsSingle',
+        project: project
+      });
+    });
+  }
 });
 
 // POST => Add this project to User's Collection
@@ -81,6 +93,7 @@ router.post('/collections/:project_id', function(req,res,next){
     });
     collection.save(function(err){
       if(err) return next(err);
+      req.flash('success_msg','Added to collections successfully');
       return res.redirect('/projects');
     });
   });
@@ -101,7 +114,7 @@ router.post('/collections/remove/:project_id', function(req,res,next){
     foundCollection.save(function(err, found){
       if(err) return next(err);
       req.flash('success_msg','removed from your collections');
-      res.redirect('/users/profile');
+      res.redirect('/users/profile?access_token='+req.user._id);
     });
   });
 });

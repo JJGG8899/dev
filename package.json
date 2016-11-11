@@ -7,10 +7,12 @@
   },
   "dependencies": {
     "async": "^2.0.1",
+    "aws-sdk": "^2.6.11",
     "bcryptjs": "^2.3.0",
     "body-parser": "~1.15.1",
     "connect-flash": "*",
     "cookie-parser": "~1.4.3",
+    "crypto": "0.0.3",
     "debug": "~2.2.0",
     "ejs": "~2.4.1",
     "ejs-mate": "^2.3.0",
@@ -25,10 +27,14 @@
     "mongoose": "*",
     "morgan": "~1.7.0",
     "multer": "*",
+    "multer-s3": "^2.3.2",
+    "multer-storage-s3": "^1.1.1",
+    "multiparty": "^4.1.2",
     "passport": "*",
     "passport-http": "*",
     "passport-http-bearer": "^1.0.1",
     "passport-local": "*",
+    "s3fs": "^2.5.0",
     "serve-favicon": "~2.3.0"
   }
 }

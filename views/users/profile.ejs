@@ -24,6 +24,13 @@
 					Edit
 				</button>
 			</a>
+			<% if(user.isAdmin) {%>
+			<a href="/admin/projects/?access_token=<%= user._id %>">
+				<button class='btn'>
+					Manage Products
+				</button>
+			</a>
+			<% } %>
 		</div>
 	</div>
 </section>
@@ -40,7 +47,7 @@
 							<div class="thumbnail">
 								<div class="thumbnail-image">
 									<a href="/projects/<%= collections[i].projectId._id %>">
-										<img src="/images/<%= collections[i].projectId.prjPicture %>">
+										<img src="<%= collections[i].projectId.prjPicture %>">
 									</a>
 									<div class="thumbnail-image-tag">
 										<h5> <%= collections[i].projectId.prjCity %> </h5>
